@@ -19,6 +19,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('ホームページ'),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          ),
+        ],
       ),
       body: Column(
         children: [
@@ -77,6 +83,11 @@ class HomePage extends StatelessWidget {
           )),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'add User',
+        child: const Icon(Icons.add),
+      ), // Th
     );
   }
 
