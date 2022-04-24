@@ -1,3 +1,4 @@
+import 'package:connectionary/ui/widgets/menu_view/hamburger_menu.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,13 +8,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final community = [
       _communityBox(Colors.greenAccent, 'お気に入り'),
-      _communityBox(Colors.greenAccent, '友達'),
-      _communityBox(Colors.greenAccent, 'サークル'),
-      _communityBox(Colors.greenAccent, '地元'),
+      _communityBox(Colors.red, '友達'),
+      _communityBox(Colors.blue, 'サークル'),
+      _communityBox(Colors.cyan, '地元'),
       _communityBox(Colors.greenAccent, '家族'),
-      _communityBox(Colors.greenAccent, '会社'),
-      _communityBox(Colors.greenAccent, '教授'),
-      _communityBox(Colors.greenAccent, 'バイト'),
+      _communityBox(Colors.cyan, '会社'),
+      _communityBox(Colors.red, '教授'),
+      _communityBox(Colors.grey, 'バイト'),
     ];
 
     return Scaffold(
@@ -26,6 +27,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      drawer: const HamburgerMenu(),
       body: Column(
         children: [
           Center(
@@ -87,7 +89,7 @@ class HomePage extends StatelessWidget {
         onPressed: () {},
         tooltip: 'add User',
         child: const Icon(Icons.add),
-      ), // Th
+      ),
     );
   }
 
