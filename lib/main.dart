@@ -1,4 +1,4 @@
-import 'package:connectionary/view/login_page.dart';
+import 'package:connectionary/view/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:connectionary/configs/app_theme.dart';
 
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme:ThemeData(
-        primaryColorDark: Colors.red,
+          primarySwatch: AppTheme.customSwatch,
       ),
-      home: const LoginPage(),
+      home: const HomePage(),
     );
   }
 }
