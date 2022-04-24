@@ -1,4 +1,5 @@
 import 'package:connectionary/ui/widgets/menu_view/hamburger_menu.dart';
+import 'package:connectionary/ui/widgets/menu_view/navigation_bar_bottom.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const NavigationBarBottom(),
       drawer: const HamburgerMenu(),
       body: Column(
         children: [
@@ -36,7 +38,7 @@ class HomePage extends StatelessWidget {
               height: 120,
               margin: const EdgeInsets.all(8),
               padding: const EdgeInsets.all(5),
-              child: Row (
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   exampleCircle(Colors.red, 100, 100),
@@ -47,9 +49,13 @@ class HomePage extends StatelessWidget {
                       fontSize: 24,
                     ),
                   ),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   const Icon(Icons.share),
-                  const SizedBox(width: 30,),
+                  const SizedBox(
+                    width: 30,
+                  ),
                 ],
               ),
             ),

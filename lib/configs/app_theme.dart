@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   AppTheme._();
+
+  static get primaryColor => customSwatch.shade600;
+
+  static get primaryColorLite => customSwatch.shade300;
+
+  static get primaryColorDark => customSwatch.shade900;
+
   static const MaterialColor customSwatch = MaterialColor(
     0xFFB65D85,
     <int, Color>{
@@ -19,6 +26,9 @@ class AppTheme {
   );
 
   static ThemeData get theme => ThemeData(
-    primarySwatch: customSwatch,
-  );
+        primarySwatch: customSwatch,
+        primaryColor: primaryColor,
+        primaryColorLight: primaryColorLite,
+        primaryColorDark: primaryColorDark,
+      );
 }
