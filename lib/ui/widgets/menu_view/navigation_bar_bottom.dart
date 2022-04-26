@@ -7,7 +7,7 @@ class NavigationBarBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      selectedItemColor: AppTheme.theme.primaryColor,
+      selectedItemColor: AppTheme.subTheme.primaryColor,
       type: BottomNavigationBarType.fixed,
       items: myBottomNavBarItems(),
       iconSize: 35,

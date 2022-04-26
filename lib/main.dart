@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme:ThemeData(
-          primarySwatch: AppTheme.customSwatch,
+          primarySwatch: AppTheme.mainCustomSwatch,
       ),
       home: const HomePage(),
     );
