@@ -1,5 +1,4 @@
 import 'package:connectionary/ui/widgets/menu_view/hamburger_menu.dart';
-import 'package:connectionary/ui/widgets/menu_view/navigation_bar_bottom.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,7 +27,6 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: const NavigationBarBottom(),
       drawer: const HamburgerMenu(),
       body: Column(
         children: [

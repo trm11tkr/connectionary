@@ -1,16 +1,26 @@
 import 'package:connectionary/configs/app_theme.dart';
+import 'package:connectionary/root_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class NavigationBarBottom extends StatelessWidget {
+class NavigationBarBottom extends ConsumerWidget {
   const NavigationBarBottom({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final pageType = ref.watch(pageTypeProvider);
     return BottomNavigationBar(
       selectedItemColor: AppTheme.subTheme.primaryColor,
+      selectedIconTheme: const IconThemeData(
+        size: 50
+      ),
       type: BottomNavigationBarType.fixed,
-      items: myBottomNavBarItems(),
       iconSize: 35,
+      currentIndex: pageType.index,
+      onTap: (index) {
+        ref.watch(pageTypeProvider.state).state = PageType.values[index];
+      },
+      items: myBottomNavBarItems(),
     );
   }
 }
@@ -28,7 +38,6 @@ List<BottomNavigationBarItem> myBottomNavBarItems() {
     BottomNavigationBarItem(
       icon: Icon(
         Icons.add_circle_outline,
-        size: 50,
       ),
       label: '',
 

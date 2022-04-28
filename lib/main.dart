@@ -1,9 +1,11 @@
+import 'package:connectionary/root_page.dart';
 import 'package:connectionary/ui/page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:connectionary/configs/app_theme.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme:ThemeData(
           primarySwatch: AppTheme.mainCustomSwatch,
       ),
-      home: const HomePage(),
+      home: RootPage(),
     );
   }
 }
