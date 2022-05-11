@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -40,7 +39,7 @@ class MemberRecord extends HiveObject {
 
   // 好きな色
   @HiveField(8)
-  Color? favoriteColor;
+  int? favoriteColor;
 
   // 作成日
   @HiveField(9)
@@ -53,15 +52,15 @@ class MemberRecord extends HiveObject {
   MemberRecord({
     required this.calledName,
     required this.fullName,
-    String? furigana,
-    int? age,
-    String? gender,
-    String? bloodType,
-    String? currentLocation,
+    this.furigana,
+    this.age,
+    this.gender,
+    this.bloodType,
+    this.currentLocation,
     this.favorite = false,
-    Color? favoriteColor,
+    this.favoriteColor,
     required this.createdAt,
-    String? freeMemo,
+    this.freeMemo,
   });
 
   factory MemberRecord.create({
@@ -72,8 +71,7 @@ class MemberRecord extends HiveObject {
     String? gender,
     String? bloodType,
     String? currentLocation,
-    Color? favoriteColor,
-    required DateTime createdAt,
+    int? favoriteColor,
     String? freeMemo,
   }) {
     return MemberRecord(
@@ -100,7 +98,7 @@ class MemberRecord extends HiveObject {
     String? bloodType,
     String? currentLocation,
     bool? favorite,
-    Color? favoriteColor,
+    int? favoriteColor,
     String? freeMemo,
 }) {
     return MemberRecord(

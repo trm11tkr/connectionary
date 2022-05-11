@@ -25,7 +25,7 @@ class MemberRecordAdapter extends TypeAdapter<MemberRecord> {
       bloodType: fields[5] as String?,
       currentLocation: fields[6] as String?,
       favorite: fields[7] == null ? false : fields[7] as bool,
-      favoriteColor: fields[8] as Color?,
+      favoriteColor: fields[8] as int?,
       createdAt: fields[9] as DateTime,
       freeMemo: fields[10] as String?,
     );
