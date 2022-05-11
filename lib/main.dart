@@ -1,10 +1,11 @@
 import 'package:connectionary/root_page.dart';
-import 'package:connectionary/ui/page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:connectionary/configs/app_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'database/database_manager.dart';
 
-void main() {
+void main() async {
+  await DBManager.instance.initialize();
   runApp(const ProviderScope(child: MyApp()));
 }
 
