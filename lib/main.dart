@@ -1,4 +1,4 @@
-import 'package:connectionary/root_page.dart';
+import 'package:connectionary/ui/page/root_page.dart';
 import 'package:flutter/material.dart';
 import 'package:connectionary/configs/app_theme.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
