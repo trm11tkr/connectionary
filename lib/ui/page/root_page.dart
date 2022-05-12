@@ -1,5 +1,5 @@
 import 'package:connectionary/ui/page/home_page.dart';
-import 'package:connectionary/ui/page/user_list_page.dart';
+import 'package:connectionary/ui/page/member_list_page.dart';
 import 'package:connectionary/ui/widgets/menu_view/hamburger_menu.dart';
 import 'package:connectionary/ui/widgets/menu_view/navigation_bar_bottom.dart';
 import 'package:flutter/material.dart';
@@ -14,10 +14,10 @@ class RootPage extends ConsumerWidget {
 
   final List<Widget> _pageList = <Widget>[
     const HomePage(),
-    const UserListPage(),
-    const UserListPage(),
-    const UserListPage(),
-    const UserListPage(),
+    const MemberListPage(),
+    const MemberListPage(),
+    const MemberListPage(),
+    const MemberListPage(),
   ];
 
   @override

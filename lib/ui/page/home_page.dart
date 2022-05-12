@@ -89,11 +89,6 @@ class HomePage extends StatelessWidget {
           )),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'add User',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 

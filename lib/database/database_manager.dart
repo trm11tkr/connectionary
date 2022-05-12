@@ -12,5 +12,9 @@ class DBManager {
     await Hive.initFlutter();
     Hive.registerAdapter(MemberRecordAdapter());
     memberRecord = await Hive.openBox<MemberRecord>('memberRecord');
+    if(memberRecord.isEmpty) {
+      memberRecord.add(
+          MemberRecord.create(calledName: 'calledName', fullName: 'fullName'));
+    }
   }
 }
